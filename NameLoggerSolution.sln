@@ -5,7 +5,9 @@ VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{B8A3FBFD-A877-AB3A-3856-A3E51268C209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberLoggerLibrary", "NumberLoggerLibrary\NumberLoggerLibrary.csproj", "{64F27F31-D38D-B941-35E3-B9241A3693C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameLoggerLibrary", "NumberLoggerLibrary\NameLoggerLibrary.csproj", "{64F27F31-D38D-B941-35E3-B9241A3693C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameLoggerLibrary.Tests", "NameLoggerLibrary.Tests\NameLoggerLibrary.Tests.csproj", "{73C0BEF3-81CF-4733-88E6-6C736C1AAE03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{64F27F31-D38D-B941-35E3-B9241A3693C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F27F31-D38D-B941-35E3-B9241A3693C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F27F31-D38D-B941-35E3-B9241A3693C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C0BEF3-81CF-4733-88E6-6C736C1AAE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C0BEF3-81CF-4733-88E6-6C736C1AAE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C0BEF3-81CF-4733-88E6-6C736C1AAE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C0BEF3-81CF-4733-88E6-6C736C1AAE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
