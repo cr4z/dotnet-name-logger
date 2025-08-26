@@ -26,26 +26,26 @@
             while (i < UpperBounds)
             {
                 i++;
-                var matchingRulePairs = new List<string>();
-
+                var namesAtThisLine = new List<string>();
                 foreach (var rule in options.UserLogRules)
                 {
-                    bool firstNameMatches = i % rule.FirstNameIndex == 0;
-                    bool lastNameMatches = i % rule.LastNameIndex == 0;
-
-                    if (firstNameMatches || lastNameMatches)
+                    bool firstNameIsAtIndex = i % rule.FirstNameIndex == 0;
+                    bool lastNameIsAtIndex = i % rule.LastNameIndex == 0;
+                    if (firstNameIsAtIndex || lastNameIsAtIndex)
                     {
-                        var nameParts = new List<string>();
-                        if (firstNameMatches) nameParts.Add(rule.FirstName);
-                        if (lastNameMatches) nameParts.Add(rule.LastName);
-
-                        matchingRulePairs.Add(string.Join(" ", nameParts));
+                        var name = new NamePair(
+                            firstNameIsAtIndex ? rule.FirstName : null,
+                            lastNameIsAtIndex ? rule.LastName : null
+                        );
+                        namesAtThisLine.Add(name.ToString());
                     }
                 }
 
-                string msg = matchingRulePairs.Count > 0
-                    ? string.Join(", ", matchingRulePairs)
-                    : i.ToString();
+                string msg = i.ToString();
+                if (namesAtThisLine.Count > 0)
+                {
+                    msg = string.Join(", ", namesAtThisLine);
+                }
 
                 res.Add(msg);
             }
