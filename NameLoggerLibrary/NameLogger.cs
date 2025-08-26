@@ -19,6 +19,9 @@
     {
         public int UpperBounds { get; set; } = options.UpperBounds;
 
+        /// <summary>
+        /// Executes the name logging process, returning a list of strings where numbers are replaced with names based on divisibility rules.
+        /// </summary>
         public List<string> Run()
         {
             List<string> res = [];
